@@ -1,0 +1,7 @@
+@mixin hook-offcanvas-bar() {
+    background-color: $secondary-color;
+}
+
+@mixin hook-offcanvas-overlay() {
+    background: rgba($primary-color, 0.3);
+}

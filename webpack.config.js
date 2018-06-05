@@ -56,7 +56,7 @@ module.exports = {
             notify: false,
             host: 'localhost',
             port: 4000,
-            files: ['./*.php'],
+            files: ['./*.php', './template-parts/*.php'],
             browser: 'google chrome',
             logLevel: 'silent',
             proxy: 'http://localhost:9009/',

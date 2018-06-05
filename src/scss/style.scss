@@ -1,2 +1,26 @@
 @import "./styles/global-vars";
 @import "./styles/base";
+
+/**
+* ------------------------------------------------------------------------------
+* Ui - Kit Imports
+* ------------------------------------------------------------------------------
+**/
+
+@import "uikit/src/scss/variables.scss";
+@import "uikit/src/scss/mixins.scss";
+
+/**
+* ------------------------------------------------------------------------------
+* custom imports
+* ------------------------------------------------------------------------------
+**/
+@import "./styles/hero";
+@import "./styles/navbar";
+@import "./styles/offcanvas";
+@import "./styles/footer";
+
+@import "uikit/src/scss/uikit.scss";
+
+// this sucks
+@import "./styles/_ukit-overrides";

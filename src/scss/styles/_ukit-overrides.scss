@@ -1,0 +1,30 @@
+/**
+* ------------------------------------------------------------------------------
+* offcanvas bullshit to style theme ...
+* ------------------------------------------------------------------------------
+**/
+.uk-offcanvas-bar .uk-nav-primary > li > a { 
+    color: $primary-color;
+    opacity: 0.6;
+}
+
+.uk-offcanvas-bar .uk-nav-primary > li.uk-active > a {
+    color: $primary-color;
+    opacity: 1;
+
+}
+
+.uk-offcanvas-bar .uk-nav-primary > li > a:hover{ 
+    color: $primary-color;
+    opacity: 1;
+}
+
+.uk-offcanvas-bar .uk-close { 
+    color: $primary-color;
+    opacity: 0.6;
+}
+
+.uk-offcanvas-bar .uk-close:hover { 
+    color: $primary-color;
+    opacity: 1;
+}

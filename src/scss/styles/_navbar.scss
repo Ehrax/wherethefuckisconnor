@@ -1,0 +1,29 @@
+@mixin hook-navbar-nav-item() {
+    opacity: 0.7;
+    color: $secondary-color;
+    font-family: $secondary-font;
+}
+
+@mixin hook-navbar-nav-item-hover() {
+    opacity: 1;
+    color: $secondary-color;
+}
+
+@mixin hook-navbar-nav-item-onclick() { 
+    opacity: 1;
+    color: $secondary-color;
+}
+
+@mixin hook-navbar-nav-item-active() {
+    opacity: 1;
+    color: $secondary-color;
+}
+
+@mixin hook-navbar-toggle-icon() {
+    opacity: 1;
+    color: $secondary-color;
+}
+
+@mixin hook-navbar-toggle-icon-hover() {
+    color: $secondary-color;
+}

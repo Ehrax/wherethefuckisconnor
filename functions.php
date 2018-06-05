@@ -41,7 +41,7 @@ function alekeis_theme_setup() {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'mini')
+        'top_menu' => __('Menu Top')
     ]);
     /**
      * Enable post thumbnails
@@ -53,13 +53,24 @@ function alekeis_theme_setup() {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
      */
     add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
-    /**
-     * Enable selective refresh for widgets in customizer
-     * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
-     */
-    // add_theme_support('customize-selective-refresh-widgets');
+
+    /* Disable WordPress Admin Bar for all users but admins. */
+    show_admin_bar(false);
 }
 add_action( 'after_setup_theme', 'alekeis_theme_setup' );
+
+/**
+ * ---------------------------------------------------------------------------------------------------------------------
+ * adding current active class to navbar
+ * ---------------------------------------------------------------------------------------------------------------------
+ */
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
 
 /**
  * ---------------------------------------------------------------------------------------------------------------------
@@ -141,38 +152,3 @@ function disable_emojis() {
    
    return $urls;
    }
-
-/**
- * ---------------------------------------------------------------------------------------------------------------------
- * Add custom post types
- * ---------------------------------------------------------------------------------------------------------------------
- */
-// add_action('init', 'register_post_types');
-// function register_post_types() {
-// 	$labels = array(
-// 		'name' => '',
-// 		'singular_name' => '',
-// 		'add_new' => '',
-// 		'add_new_item' => '',
-// 		'edit_item' => '',
-// 		'view_item' => '',
-// 		'search_item' => '',
-// 		'not_found' => '',
-// 		'not_found_in_trash' => '',
-// 		'parent_item_colon' => '' );
-// 	$args = array (
-// 		'labels' => $labels,
-// 		'public' => true,
-// 		'public_queryable' => true,
-// 		'show_ui' => true,
-// 		'query_var' => true,
-// 		'menu_icon' => '',
-// 		'rewrite' => true,
-// 		'capability_type' => 'post',
-// 		'hierarchical' => 'false',
-// 		'menu_position' => null,
-// 		'supports' => array('title', 'thumbnail', 'page-attributes'),
-// 		'exclude_from_search' => true
-// 	);
-// 	register_post_type('', $args);
-// }

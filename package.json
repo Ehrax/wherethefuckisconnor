@@ -25,6 +25,7 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
+    "uikit": "^3.0.0-rc.4",
     "webpack": "^4.9.1",
     "webpack-cli": "^2.1.4"
   }

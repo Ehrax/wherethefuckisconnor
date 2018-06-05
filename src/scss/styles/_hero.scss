@@ -1,0 +1,36 @@
+$hero-title-font-size: 7.5rem;
+$hero-subtitle-font-size: 2rem;
+
+.header-content {
+    background-color: rgba($primary-color, 0.5);
+    padding: 10px 0 15px 0;
+
+    .hero-title {
+        color: $secondary-color;
+        font-family: $pirmary-font;
+        font-size: $hero-title-font-size;
+        text-transform: uppercase;
+        margin: 0;
+        line-height: 0.9;
+    }
+
+    .hero-subtitle {
+        color: $secondary-color;
+        margin: 0;
+        font-family: $secondary-font;
+        font-size: $hero-subtitle-font-size;
+        text-transform: lowercase;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        margin-left: 0;
+
+        .hero-title {
+            font-size: $hero-title-font-size * 0.6;
+        }
+        
+        .hero-subtitle {
+            font-size: $hero-subtitle-font-size * 0.6;
+        }
+    }
+}
