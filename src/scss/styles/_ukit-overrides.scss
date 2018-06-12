@@ -3,28 +3,50 @@
 * offcanvas bullshit to style theme ...
 * ------------------------------------------------------------------------------
 **/
-.uk-offcanvas-bar .uk-nav-primary > li > a { 
+@mixin uk-nav-normal () {
     color: $primary-color;
     opacity: 0.6;
+}
+
+@mixin uk-nav-hover-focus () {
+    color: $primary-color;
+    opacity: 1;
+}
+
+.uk-offcanvas-bar .uk-nav-primary > li > a { 
+    @include uk-nav-normal();
+
+    &:hover, &:focus {
+        @include uk-nav-hover-focus();
+    } 
 }
 
 .uk-offcanvas-bar .uk-nav-primary > li.uk-active > a {
-    color: $primary-color;
-    opacity: 1;
-
+    @include uk-nav-normal();
 }
 
-.uk-offcanvas-bar .uk-nav-primary > li > a:hover{ 
-    color: $primary-color;
-    opacity: 1;
-}
 
 .uk-offcanvas-bar .uk-close { 
-    color: $primary-color;
-    opacity: 0.6;
+   @include uk-nav-normal();
+
+    &:hover, &:focus {
+        @include uk-nav-hover-focus();
+    }
 }
 
-.uk-offcanvas-bar .uk-close:hover { 
-    color: $primary-color;
-    opacity: 1;
+
+/**
+* ------------------------------------------------------------------------------
+* footer overrides 
+* ------------------------------------------------------------------------------
+**/
+
+footer {
+    a, .uk-link {
+        color: $deep-space-sparkle;
+    }
+
+    a:hover, a:focus, .uk-link:hover, .uk-link:focus {
+        color: lighten($deep-space-sparkle, 10%);
+    }
 }

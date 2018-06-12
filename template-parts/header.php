@@ -1,5 +1,5 @@
 <div class="uk-offcanvas-content">
-	<header>
+	<header id="home">
 		<div class="uk-position-relative">
 			<div class="uk-position-top">
 				<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
@@ -27,7 +27,7 @@
 								<?php echo $img['url']?> 1300w" 
 					sizes="(max-width: 768px) 768px, 100vw"
 					uk-img>
-					<div class="header-content uk-flex uk-flex-column  uk-flex-middle uk-width-1-1" 
+					<div class="header-content uk-flex uk-flex-column uk-flex-middle uk-width-1-1" 
 						uk-scrollspy="cls:uk-animation-slide-top">
 						<h1 class="hero-title"><? the_field('hero_title'); ?></h1>
 						<h2 class="hero-subtitle"><?php the_field('hero_subtitle') ?></h2>
