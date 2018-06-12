@@ -19,9 +19,20 @@ footer {
         }
     }
 
-    .footer-credits {
-        padding: 10px 0 10px 0;
+    .footer-page-link-instagram {
+        cursor: pointer;
+        color: $secondary-color;
         background-color: darken($primary-color, 5%);
+        padding: 10px 8px 10px 8px;
+
+        &:hover {
+            background-color: #F77979;
+            transform: scale(0.9);
+        }
+    }
+
+    .footer-credits {
+        padding: 10px 0 20px 0;
         font-size: 8pt;
 
         p  {

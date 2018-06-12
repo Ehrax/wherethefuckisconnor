@@ -43,7 +43,7 @@
 
 footer {
     a, .uk-link {
-        color: $deep-space-sparkle;
+        color: lighten($deep-space-sparkle, 10%);
     }
 
     a:hover, a:focus, .uk-link:hover, .uk-link:focus {
