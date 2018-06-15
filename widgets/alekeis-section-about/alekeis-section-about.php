@@ -1,27 +1,27 @@
 <?php
 
 /*
-Widget Name: Alekei Gallery
-Description: adds a photo portfolio gallery :)
+Widget Name: Alekeis Section About
+Description: add a nice about section
 Author: Alexander Rasputin
 Author URI: https://alekei.me
 Widget URI: https://alekei.me
 */
 
-class Widget_Boilerplate extends SiteOrigin_Widget {
+class Alekeis_Section_About extends SiteOrigin_Widget {
   function __construct() {
     //Call the parent constructor with the required arguments.
     parent::__construct(
       // The unique id for your widget.
-      'widget_boilerplate',
+      'alekeis_section_about',
 
       // The name of the widget for display purposes.
-      'wiget_boilerplate',
+      'Alekes Section About',
 
       // The $widget_options array, which is passed through to WP_Widget.
       // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
       array(
-          'description' => 'just a simple widget boilerplate',
+          'description' => 'A nice about section with 3 pictures and a small text',
       ),
 
       //The $control_options array, which is passed through to WP_Widget
@@ -46,4 +46,4 @@ class Widget_Boilerplate extends SiteOrigin_Widget {
 
 }
 
-siteorigin_widget_register('wiget_boilerplate', __FILE__, 'Widget_Boilerplate');
+siteorigin_widget_register('alekeis_section_spacer', __FILE__, 'Alekeis_Section_Spacer');

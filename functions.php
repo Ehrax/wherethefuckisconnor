@@ -56,21 +56,66 @@ function alekeis_theme_setup() {
 
     /* Disable WordPress Admin Bar for all users but admins. */
     show_admin_bar(false);
+
+
+
 }
 add_action( 'after_setup_theme', 'alekeis_theme_setup' );
 
 /**
  * ---------------------------------------------------------------------------------------------------------------------
- * adding current active class to navbar
+ * cleaning up wordpres
  * ---------------------------------------------------------------------------------------------------------------------
  */
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-function special_nav_class ($classes, $item) {
-    if (in_array('current-menu-item', $classes) ){
-        $classes[] = 'active ';
-    }
-    return $classes;
+
+/**
+ * Snippet Name: Clean up and customize body_class
+ * Snippet URL: http://www.wpcustoms.net/snippets/clean-up-and-customize-body_class/
+ */
+function wpc_body_class($wp_classes, $extra_classes)
+{
+    // List of classes allowed
+    $whitelist = array('my_custom_class', 'another-class');
+    $wp_classes = array_intersect($wp_classes, $whitelist);
+    return array_merge($wp_classes, (array) $extra_classes);
 }
+add_filter('body_class', 'wpc_body_class', 10, 2);
+
+//Deletes all CSS classes and id's, except for those listed in the array below
+function custom_wp_nav_menu($var) {
+    return is_array($var) ? array_intersect($var, array(
+          //List of allowed menu classes
+          'current_page_item',
+          'current_page_parent',
+          'current_page_ancestor',
+          'first',
+          'last',
+          'vertical',
+          'horizontal'
+          )
+      ) : '';
+  }
+  add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
+  add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
+  add_filter('page_css_class', 'custom_wp_nav_menu');
+  //Replaces "current-menu-item" with "active"
+  function current_to_active($text){
+      $replace = array(
+          //List of menu item classes that should be changed to "active"
+          'current_page_item' => 'uk-active',
+          'current_page_parent' => 'uk-active',
+          'current_page_ancestor' => 'uk-active',
+      );
+      $text = str_replace(array_keys($replace), $replace, $text);
+          return $text;
+      }
+  add_filter ('wp_nav_menu','current_to_active');
+  //Deletes empty classes and removes the sub menu class
+  function strip_empty_classes($menu) {
+      $menu = preg_replace('/ class=""| class="sub-menu"/','',$menu);
+      return $menu;
+  }
+  add_filter ('wp_nav_menu','strip_empty_classes');
 
 /**
  * ---------------------------------------------------------------------------------------------------------------------

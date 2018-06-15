@@ -5,11 +5,13 @@
 **/
 @mixin uk-nav-normal () {
     color: $primary-color;
+    font-family: $secondary-font;
     opacity: 0.6;
 }
 
 @mixin uk-nav-hover-focus () {
     color: $primary-color;
+    font-family: $secondary-font;
     opacity: 1;
 }
 

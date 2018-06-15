@@ -1,0 +1,26 @@
+$padding: 50px;
+$svg-widht: 400px;
+
+.section-spacer {
+    background-color: $primary-color;
+    padding: $padding;
+
+    .svg {
+        width: $svg-widht;
+    }
+
+    .no-svg {
+        height: 50px;
+        width: $svg-widht;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        .svg {
+            width: $svg-widht * 0.5;
+        }
+
+        .no-svg {
+            width: $svg-widht * 0.5;
+        }
+    }
+}

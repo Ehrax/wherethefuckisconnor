@@ -1,1 +1,0 @@
-<h1>basic page builder widget boilerplate</h1>
