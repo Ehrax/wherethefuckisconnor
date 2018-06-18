@@ -36,7 +36,6 @@
     }
 }
 
-
 /**
 * ------------------------------------------------------------------------------
 * footer overrides 
@@ -50,5 +49,19 @@ footer {
 
     a:hover, a:focus, .uk-link:hover, .uk-link:focus {
         color: lighten($deep-space-sparkle, 10%);
+    }
+}
+
+/**
+* ------------------------------------------------------------------------------
+* section about, i more and more dislike this !!!
+* ------------------------------------------------------------------------------
+**/
+
+.section-about {
+    padding-top: 0;
+
+    @media (min-width: $breakpoint-medium) {  
+        padding-top: 0;
     }
 }
