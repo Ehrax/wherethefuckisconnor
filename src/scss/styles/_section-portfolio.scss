@@ -1,0 +1,23 @@
+.so-widget-sow-simple-masonry {
+    max-width: 1200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $breakpoint-medium) {
+        margin-top: 75px;
+        magin-bottom: 75px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media (min-width: $breakpoint-small) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
