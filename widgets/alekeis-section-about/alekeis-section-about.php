@@ -16,7 +16,7 @@ class Alekeis_Section_About extends SiteOrigin_Widget {
       'alekeis_section_about',
 
       // The name of the widget for display purposes.
-      'Alekes Section About',
+      'Alekeis Section About',
 
       // The $widget_options array, which is passed through to WP_Widget.
       // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
