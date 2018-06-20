@@ -21,6 +21,7 @@ $section-about-heading-left: 60px;
             text-transform: uppercase;
             font-size: $section-about-heading-left;
             line-height: 1.1;
+            margin-bottom: 0;
         }
     }
 
@@ -60,10 +61,6 @@ $section-about-heading-left: 60px;
     @media (max-width: $breakpoint-medium) {  
 
         .section-about-left {
-            > div {
-                height: 200px;
-            }
-
             img {
                 margin-top: 0;
             }

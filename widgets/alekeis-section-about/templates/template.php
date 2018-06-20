@@ -8,23 +8,23 @@
     <div class="uk-container">
         <div class="uk-child-width-expand@s uk-grid-small" uk-grid >
             <div class="section-about-left">
-                <div class="uk-flex uk-flex-middle">
+                <div class="uk-flex uk-flex-middle" uk-scrollspy="cls:uk-animation-slide-top; repeat:true;">
                     <h1><?php echo wp_kses_post($instance['heading_left']); ?></h1>
                 </div>
-                <div>
+                <div uk-scrollspy="cls:uk-animation-slide-left; repeat: true;">
                     <div data-src="<?php echo wp_get_attachment_url( $img_left_id ); ?>" uk-img></div>
                 </div>
             </div>
             <div class="section-about-middle">
-                <div>
+                <div uk-scrollspy="cls:uk-animation-slide-bottom; repeat: true;">
                     <div data-src="<?php echo wp_get_attachment_url( $img_middle_id ); ?>" uk-img></div>
                 </div>
             </div>
             <div class="section-about-right">
-                <div>
+                <div uk-scrollspy="cls:uk-animation-slide-top; repeat: true;">
                     <div data-src="<?php echo wp_get_attachment_url( $img_right_id ); ?>" uk-img></div>
                 </div>
-                <div class="section-about-right-text">
+                <div class="section-about-right-text" uk-scrollspy="cls:uk-animation-slide-bottom; repeat:true;">
                     <p><?php echo wp_kses_post($instance['about_description']) ?></p>
                 </div>
             </div>
