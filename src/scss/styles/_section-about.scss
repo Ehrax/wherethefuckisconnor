@@ -53,6 +53,8 @@ $section-about-heading-left: 60px;
 
         .section-about-right-text {
             margin-top: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
 
@@ -73,6 +75,5 @@ $section-about-heading-left: 60px;
                 font-size: $section-about-heading-left * 0.8;
             }
         }
-        
     }
 }
