@@ -36,7 +36,7 @@ class Alekeis_Widget_Header extends SiteOrigin_Widget {
         ),
         'checkbox' => array(
           'type' => 'checkbox',
-          'label' => _('Dark Background Heading?', 'widget-form-fields-text-domain')
+          'label' => __('Dark Background Heading?', 'widget-form-fields-text-domain')
         )
       ),
 
