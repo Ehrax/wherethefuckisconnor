@@ -31,5 +31,9 @@ $header-padding-m: 30px;
 
     @media (max-width: $breakpoint-medium) {  
         padding: $header-padding-m 0 $header-padding-m 0;
+
+        #about {
+            padding-bottom: 0;
+        }
     }
 }
