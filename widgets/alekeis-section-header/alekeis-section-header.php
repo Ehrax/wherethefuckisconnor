@@ -32,7 +32,7 @@ class Alekeis_Widget_Header extends SiteOrigin_Widget {
       array(
         'text' => array(
           'type' => 'text',
-          'label' => _('Section Header goes here', 'siteorigin-widgets')
+          'label' => __('Section Header goes here', 'siteorigin-widgets')
         ),
         'checkbox' => array(
           'type' => 'checkbox',
