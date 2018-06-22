@@ -21,7 +21,7 @@
 	</div>
 	<div class="uk-flex uk-flex-column footer-credits">
 		<div class="uk-flex uk-flex-center">
-			<p>© <?php echo date('Y') ?> created and designed by <a target="_blank" href="https://alekei.me">Alexander Rasputin</a></p>
+			<p>© <?php echo date('Y') ?> created and designed by <a target="_blank" href="">Alexander Rasputin</a></p>
 		</div>
 		<div class="uk-flex uk-flex-center">
 			 <p>pictures taken by <a target="_blank" href="https://www.behance.net/chiaradollak">Chiara Dollak</a></p>
