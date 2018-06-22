@@ -28,7 +28,14 @@
 				uk-img>
 				<div class="header-content uk-flex uk-flex-column uk-flex-middle uk-width-1-1" 
 					uk-scrollspy="cls:uk-animation-slide-top">
-					<h1 class="hero-title"><? the_field('hero_title'); ?></h1>
+					<?php 
+						$hero_title = get_field('hero_title');
+
+						if ($hero_title): ?> 
+							<h1 class="hero-title"><? the_field('hero_title'); ?></h1>
+						<?php else: ?>
+							<h1 class="hero-title">Something went wrong</h1>
+						<?php endif; ?>
 					<h2 class="hero-subtitle"><?php the_field('hero_subtitle') ?></h2>
 				</div>
 			</div>
