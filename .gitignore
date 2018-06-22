@@ -105,3 +105,4 @@ typings/
 
 #### custom ###
 dist
+dist/assets.json
