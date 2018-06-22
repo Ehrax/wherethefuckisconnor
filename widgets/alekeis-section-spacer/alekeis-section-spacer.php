@@ -31,7 +31,7 @@ class Alekeis_Section_Spacer extends SiteOrigin_Widget {
       array(
         'checkbox' => array(
           'type' => 'checkbox',
-          'label' => _('Tattoo Needle in the middle?', 'widget-form-fields-text-domain'),
+          'label' => __('Tattoo Needle in the middle?', 'widget-form-fields-text-domain'),
           'default' => true
         )
       ),
