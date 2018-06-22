@@ -32,7 +32,7 @@
 						$hero_title = get_field('hero_title');
 
 						if ($hero_title): ?> 
-							<h1 class="hero-title"><? the_field('hero_title'); ?></h1>
+							<h1 class="hero-title"><? echo $hero_title ?></h1>
 						<?php else: ?>
 							<h1 class="hero-title">Something went wrong</h1>
 						<?php endif; ?>
