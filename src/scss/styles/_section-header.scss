@@ -32,8 +32,10 @@ $header-padding-m: 30px;
     @media (max-width: $breakpoint-medium) {  
         padding: $header-padding-m 0 $header-padding-m 0;
 
-        #about {
-            padding-bottom: 0;
+        .so-widget-alekeis_widget_header {
+            .section-header {
+                padding-bottom: 0;
+            }
         }
     }
 }
